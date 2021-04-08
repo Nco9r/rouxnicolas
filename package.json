@@ -1,0 +1,30 @@
+{
+  "name": "rouxnicolas",
+  "version": "1.0.0",
+  "description": "Développeur web freelance et créateur de sites internet, refonte, intégration, référencement et stratégie digitale",
+  "author": "Nco9r",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
+    "build": "nuxt build",
+    "start": "cross-env NODE_ENV=production node server/index.js",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "cookie-universal-nuxt": "^2.1.4",
+    "cross-env": "^5.2.0",
+    "express": "^4.16.4",
+    "gsap": "^3.6.0",
+    "locomotive-scroll": "^4.0.6",
+    "nodemailer": "^6.5.0",
+    "nodemailer-sparkpost-transport": "^2.2.0",
+    "nuxt": "^2.0.0",
+    "scroll-triggers": "^4.4.0",
+    "vue-lerp-element": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
