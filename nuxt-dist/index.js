@@ -13,9 +13,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_cookieuniversalnuxt_81ad87d0 from 'nuxt_plugin_cookieuniversalnuxt_81ad87d0' // Source: ./cookie-universal-nuxt.js (mode: 'all')
-import nuxt_plugin_workbox_2b0cd4e8 from 'nuxt_plugin_workbox_2b0cd4e8' // Source: ./workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_0cda909f from 'nuxt_plugin_metaplugin_0cda909f' // Source: ./pwa/meta.plugin.js (mode: 'all')
-import nuxt_plugin_iconplugin_11823613 from 'nuxt_plugin_iconplugin_11823613' // Source: ./pwa/icon.plugin.js (mode: 'all')
 import nuxt_plugin_axios_24567c70 from 'nuxt_plugin_axios_24567c70' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_locomotiveScroll_749f05df from 'nuxt_plugin_locomotiveScroll_749f05df' // Source: ../plugins/locomotiveScroll.js (mode: 'client')
 
@@ -179,18 +176,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_cookieuniversalnuxt_81ad87d0 === 'function') {
     await nuxt_plugin_cookieuniversalnuxt_81ad87d0(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_workbox_2b0cd4e8 === 'function') {
-    await nuxt_plugin_workbox_2b0cd4e8(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_metaplugin_0cda909f === 'function') {
-    await nuxt_plugin_metaplugin_0cda909f(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_iconplugin_11823613 === 'function') {
-    await nuxt_plugin_iconplugin_11823613(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_24567c70 === 'function') {

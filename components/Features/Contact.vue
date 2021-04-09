@@ -78,10 +78,10 @@ export default {
             .then(res => (
                 
                 this.validate = true, 
-                this.form = '',
-                this.$router.push('/')
+                this.form = ''
             ))
-            .catch(e);
+            .catch(e)
+            this.error = true;
         },
         // async submit(e){
         //     e.preventDefault();
@@ -293,6 +293,28 @@ button {
         font-size: 50px; 
         line-height: 55px;
     }
+
+    button {
+    -webkit-appearance: none; 
+    padding: 10px;
+    background-color: var(--rouge); 
+    border: none; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    color: var(--white);
+    font-weight: bold; 
+    outline: none;
+    text-align: center; 
+    margin-bottom: 30px;
+    margin: 30px auto;
+    transition: all .5s;
+    border-radius: 3px;
+    width: 40%;
+    float: right;
+    font-size: 16px;
+    cursor: pointer;
+}
 
 }
 

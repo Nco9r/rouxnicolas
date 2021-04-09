@@ -15,7 +15,7 @@ async function main(text, subject , from) {
         });
         console.log(data);
     }catch(e) {
-        console.log(e);
+        console.log(data);
     }
 }
 

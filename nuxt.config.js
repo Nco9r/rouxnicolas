@@ -53,7 +53,6 @@ module.exports = {
 
   serverMiddleware: [
     { path: '/api/index', handler: '~/api/index' },
-    { path: '/api/send', handler: '~/api/send' },
   ],
   /*
   ** Plugins to load before mounting the App
