@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
-    "vercel-build": "nuxt build",
+    "build": "vercel-build",
     "start": "cross-env NODE_ENV=production node server/index.js",
     "generate": "nuxt generate"
   },
