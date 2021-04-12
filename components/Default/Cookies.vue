@@ -23,7 +23,7 @@
 export default {
     data() {
         return {
-            cook: false,
+            cook: true,
         }
     },
     mounted(){
@@ -70,7 +70,7 @@ export default {
     left: 0; 
     right: 0; 
     overflow-y: scroll!important;
-    z-index: 20000; 
+    z-index: 30000; 
     background-color: white;
     border-radius: 6px;
 }
@@ -108,7 +108,7 @@ export default {
     font-weight: 700;
     font-size: 16px;
     color: var(--sombre);
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     outline: none; 
     width: 100%;
     cursor: pointer;

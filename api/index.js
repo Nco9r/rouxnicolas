@@ -18,7 +18,7 @@ app.post('/send', (req, res) => {
   async function main() {
   try {
     const data = await sparkPostTransporter.sendMail({
-      from: 'no-replay@rouxnicolas.fr',
+      from: 'noreply@rouxnicolas.fr',
       to: req.body.email,
       subject: 'Demande de devis',
       html: `<p style="font-size : 14px">Bonjour <strong>${req.body.name}</strong>,</p> <p style="font-size : 14px">Nous avons bien reçu votre demande, nous reviendrons vers vous dans les plus brefs délai. </p><p style="font-size : 14px">Merci de votre confiance, à bientot, </p><p style="font-size : 14px"> Nicolas ROUX <br> 06 83 97 65 90 <br> Développeur Web</p>`,

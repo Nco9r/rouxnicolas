@@ -2,7 +2,7 @@
   <div class="stack" >
       <div class="bloc_right">
       <p class="post_content">DOMAINES | COMPÉTENCES</p>
-      <h2 class="title_e"><span data-scroll="" data-scroll-delay="0.13" data-scroll-speed="6" class="is-inview">B</span>Mes domaines d'expertise<span class="rouge">.</span></h2>
+      <h2 class="title_e"><span data-scroll="" data-scroll-delay="0.13" data-scroll-speed="6" class="is-inview"></span>Mes domaines d'expertise<span class="rouge">.</span></h2>
       <p class="after_title">Pour réaliser votre outil digital, quelque soit votre secteur d'activité, je vous propose différentes compétences qui s'articulent autour de trois axes : le conseil, le développement et l'accompagnement.
       </p>
       <p class="after_title">J'interviens dans des domaines d'expertises ciblés : création de site internet, référencement naturel et UX Design.

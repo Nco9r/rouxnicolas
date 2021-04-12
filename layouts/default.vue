@@ -1,11 +1,11 @@
 <template>
   <div>  
     <the-header />
+    <cookies/>
     <nuxt>
     </nuxt>
     <the-footer />
     <neige/>
-     <cookies/>
   </div>
 </template>
 
@@ -17,9 +17,7 @@ import TheFooter from '../components/Default/TheFooter'
 import Neige from '../components/Default/Neige'
 import Cookies from '../components/Default/Cookies'
 
-import { gsap } from 'gsap'
-import  { ScrollTrigger }  from "gsap/dist/ScrollTrigger"
-gsap.registerPlugin(ScrollTrigger)
+
 
 
 export default {
