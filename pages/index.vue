@@ -18,7 +18,7 @@
 <script>
 
 import Hero from '../components/Features/Hero';
-import Stacks from '../components/Features/Stacks';
+import Stacks from '../components/Features/stacks';
 import Expertise from '../components/Features/Expertise';
 import Reference from '../components/Features/Reference';
 
