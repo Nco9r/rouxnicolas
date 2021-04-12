@@ -13,7 +13,7 @@
               <div class="title_footer">
                   <h4>Adresse</h4>
                   <p>1 rue des tiocs <br>
-                  33130, Bègles</p>
+                  33130, Bègles.</p>
               </div>
           </div>
           <div class="items_footer">
