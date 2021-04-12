@@ -3,7 +3,6 @@ require('dotenv').config()
 module.exports = {
   mode: 'universal',
   target: 'server',
-  buildDir: 'nuxt-dist',
   /*
   ** Headers of the page
   */
