@@ -13,9 +13,6 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_cookieuniversalnuxt_81ad87d0 from 'nuxt_plugin_cookieuniversalnuxt_81ad87d0' // Source: ./cookie-universal-nuxt.js (mode: 'all')
-import nuxt_plugin_workbox_2b0cd4e8 from 'nuxt_plugin_workbox_2b0cd4e8' // Source: ./workbox.js (mode: 'client')
-import nuxt_plugin_metaplugin_0cda909f from 'nuxt_plugin_metaplugin_0cda909f' // Source: ./pwa/meta.plugin.js (mode: 'all')
-import nuxt_plugin_iconplugin_11823613 from 'nuxt_plugin_iconplugin_11823613' // Source: ./pwa/icon.plugin.js (mode: 'all')
 import nuxt_plugin_axios_24567c70 from 'nuxt_plugin_axios_24567c70' // Source: ./axios.js (mode: 'all')
 import nuxt_plugin_locomotiveScroll_749f05df from 'nuxt_plugin_locomotiveScroll_749f05df' // Source: ../plugins/locomotiveScroll.js (mode: 'client')
 
@@ -63,7 +60,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"Développeur Web freelance Bordeaux - Création de sites internet","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Développeur web freelance à Bordeaux et créateur de sites internet, refonte, intégration, référencement et stratégie digitale"},{"name":"keywords","content":"site Web, site Internet, Développeur web freelance bordeaux, Développeur web freelance bègles, création de sites internet, refonte de sites internet, intégration, développement web, html, css, javascript, Bordeaux, Bègles, référencement bordeaux, référencement bègles."},{"hid":"og:title","property":"og:title","content":"Développeur Web freelance - Création de sites internet"},{"hid":"og:description","property":"og:description","content":"Développeur web freelance et créateur de sites internet, refonte, intégration, référencement et stratégie digitale"},{"hid":"og:image","property":"og:image","content":"~assets\u002Fimg\u002Fpng\u002Fog_image.jpg","href":"~assets\u002Fimg\u002Fpng\u002Fog_image.jpg"},{"hid":"og:image:secure_url","property":"og:image:secure_url","content":"~assets\u002Fimg\u002Fpng\u002Fog_image.jpg","href":"~assets\u002Fimg\u002Fpng\u002Fog_image.jpg"},{"hid":"charset","charset":"utf-8"},{"hid":"mobile-web-app-capable","name":"mobile-web-app-capable","content":"yes"},{"hid":"apple-mobile-web-app-title","name":"apple-mobile-web-app-title","content":"rouxnicolas"},{"hid":"author","name":"author","content":"Nco9r"},{"hid":"og:type","name":"og:type","property":"og:type","content":"website"},{"hid":"og:site_name","name":"og:site_name","property":"og:site_name","content":"rouxnicolas"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Assistant:wght@300;400;500;700;800&family=Playfair+Display:wght@900&display=swap"},{"hid":"shortcut-icon","rel":"shortcut icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_64x64.5f6a36.png"},{"hid":"apple-touch-icon","rel":"apple-touch-icon","href":"\u002F_nuxt\u002Ficons\u002Ficon_512x512.5f6a36.png","sizes":"512x512"},{"rel":"manifest","href":"\u002F_nuxt\u002Fmanifest.0b46e703.json","hid":"manifest"}],"style":[],"script":[],"htmlAttrs":{"lang":"en"}},
+    head: {"title":"Développeur Web freelance Bordeaux - Création de sites internet","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Développeur web freelance à Bordeaux et créateur de sites internet, refonte, intégration, référencement et stratégie digitale"},{"name":"keywords","content":"site Web, site Internet, Développeur web freelance bordeaux, Développeur web freelance bègles, création de sites internet, refonte de sites internet, intégration, développement web, html, css, javascript, Bordeaux, Bègles, référencement bordeaux, référencement bègles."},{"hid":"og:title","property":"og:title","content":"Développeur Web freelance - Création de sites internet"},{"hid":"og:description","property":"og:description","content":"Développeur web freelance et créateur de sites internet, refonte, intégration, référencement et stratégie digitale"},{"hid":"og:image","property":"og:image","content":"~assets\u002Fimg\u002Fpng\u002Fog_image.jpg","href":"~assets\u002Fimg\u002Fpng\u002Fog_image.jpg"},{"hid":"og:image:secure_url","property":"og:image:secure_url","content":"~assets\u002Fimg\u002Fpng\u002Fog_image.jpg","href":"~assets\u002Fimg\u002Fpng\u002Fog_image.jpg"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Assistant:wght@300;400;500;700;800&family=Playfair+Display:wght@900&display=swap"}],"style":[],"script":[]},
 
     router,
     nuxt: {
@@ -179,18 +176,6 @@ async function createApp(ssrContext, config = {}) {
 
   if (typeof nuxt_plugin_cookieuniversalnuxt_81ad87d0 === 'function') {
     await nuxt_plugin_cookieuniversalnuxt_81ad87d0(app.context, inject)
-  }
-
-  if (process.client && typeof nuxt_plugin_workbox_2b0cd4e8 === 'function') {
-    await nuxt_plugin_workbox_2b0cd4e8(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_metaplugin_0cda909f === 'function') {
-    await nuxt_plugin_metaplugin_0cda909f(app.context, inject)
-  }
-
-  if (typeof nuxt_plugin_iconplugin_11823613 === 'function') {
-    await nuxt_plugin_iconplugin_11823613(app.context, inject)
   }
 
   if (typeof nuxt_plugin_axios_24567c70 === 'function') {

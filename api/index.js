@@ -10,7 +10,7 @@ app.post('/send', (req, res) => {
 
   const sparkPostTransporter = nodemailer.createTransport(
   sparkPostTransport({
-    sparkPostApiKey: "95e28bcb759b44011ed5dc34b04b064c96c33c8f",
+    sparkPostApiKey: process.env.sparkPostApiKey,
     endpoint: "https://api.sparkpost.com"
   })
 );
