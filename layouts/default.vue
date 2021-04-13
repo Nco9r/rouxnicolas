@@ -33,8 +33,9 @@ export default {
     }
   },
   mounted(){
-     
+    
   },
+
   methods: {
   }
 }
