@@ -24,8 +24,10 @@ app.post('/send', (req, res) => {
       html: `<p style="font-size : 14px">Bonjour <strong>${req.body.name}</strong>,</p> <p style="font-size : 14px">Nous avons bien reçu votre demande, nous reviendrons vers vous dans les plus brefs délai. </p><p style="font-size : 14px">Merci de votre confiance, à bientot, </p><p style="font-size : 14px"> Nicolas ROUX <br> 06 83 97 65 90 <br> Développeur Web</p>`,
     });
     res.send(data);
+    return;
   } catch (e) {
     res.send(e);
+    return;
   }
 }
 
