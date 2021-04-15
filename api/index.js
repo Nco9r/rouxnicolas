@@ -1,5 +1,6 @@
 import express from 'express'
 import nodemailer from 'nodemailer'
+import { nextTick } from 'q';
 const sparkPostTransport = require('nodemailer-sparkpost-transport');
 
 const app = express()
@@ -23,11 +24,9 @@ app.post('/send', (req, res) => {
       subject: 'Demande de devis',
       html: `<p style="font-size : 14px">Bonjour <strong>${req.body.name}</strong>,</p> <p style="font-size : 14px">Nous avons bien reçu votre demande, nous reviendrons vers vous dans les plus brefs délai. </p><p style="font-size : 14px">Merci de votre confiance, à bientot, </p><p style="font-size : 14px"> Nicolas ROUX <br> 06 83 97 65 90 <br> Développeur Web</p>`,
     });
-    res.send(data);
-    return;
+    res.setHeader('Content-type', 'application/json')
+    res.send(data)
   } catch (e) {
-    res.send(e);
-    return;
   }
 }
 
@@ -41,9 +40,9 @@ async function mail() {
       subject: 'Demande de devis',
       text: `Bonjour vous avez une nouvelle demande de devis de la part de ${req.body.name}. Vous pouvez le joindre au ${req.body.phone} ou part mail ${req.body.email}. Il a choisi la prestation ${req.body.prestation} et vous a laissé le message suivant ${req.body.text}.`,
     });
-    res.send(data);
-  } catch (e) {
-    res.send(e);
+    res.setHeader('Content-type', 'application/json')
+    res.send(data)
+  } catch (e){
 
   }
 }
