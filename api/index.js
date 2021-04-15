@@ -1,10 +1,11 @@
 import express from 'express'
 import nodemailer from 'nodemailer'
-import { nextTick } from 'q';
 const sparkPostTransport = require('nodemailer-sparkpost-transport');
 
 const app = express()
+
 app.use(express.json())
+
 
 app.post('/send', (req, res) => {
   console.log(req.body);

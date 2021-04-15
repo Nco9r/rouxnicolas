@@ -74,7 +74,7 @@ export default {
         submit(e) {
             e.preventDefault();
             console.log({...this.form})
-            this.$axios.post('/api/send', {...this.form})
+            this.$axios.post('api/send', {...this.form})
             .then(res => (
                 
                 this.validate = true, 
