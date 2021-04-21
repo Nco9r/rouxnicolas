@@ -73,30 +73,30 @@ export default {
         }
     },
     methods: {
-        // submit(e) {
-        //     e.preventDefault();
-        //     console.log({...this.form})
-        //     this.$axios.post('api/send', {...this.form})
-        //     .then(res => (
-                
-        //         this.validate = true, 
-        //         this.form = ''
-        //     ))
-        //     .catch(e)
-        //     this.error = true;
-        // },
-        async submit(e){
+        submit(e) {
             e.preventDefault();
             console.log({...this.form})
-            try{
-                const data = await axios.post('/api/send', {...this.form})
-                this.validate = true,
+            this.$axios.post('api/send', {...this.form})
+            .then(res => (
+                
+                this.validate = true, 
                 this.form = ''
-            }catch(e){
-                this.error = true,
-                this.form = ''
-            }
-        }
+            ))
+            .catch(e)
+            this.error = true;
+        },
+        // async submit(e){
+        //     e.preventDefault();
+        //     console.log({...this.form})
+        //     try{
+        //         const data = await axios.post('/api/send', {...this.form})
+        //         this.validate = true,
+        //         this.form = ''
+        //     }catch(e){
+        //         this.error = true,
+        //         this.form = ''
+        //     }
+        // }
     }
 }
 </script>
