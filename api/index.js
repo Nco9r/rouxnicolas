@@ -3,8 +3,10 @@ import nodemailer from 'nodemailer'
 const sparkPostTransport = require('nodemailer-sparkpost-transport');
 
 const app = express()
-
 app.use(express.json())
+
+const cors = require('cors');
+app.use(cors());
 
 
 app.post('/send', (req, res) => {
