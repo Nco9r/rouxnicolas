@@ -1,7 +1,6 @@
 import express from 'express'
 import nodemailer from 'nodemailer'
 const sparkPostTransport = require('nodemailer-sparkpost-transport');
-
 const app = express()
 app.use(express.json())
 
