@@ -126,6 +126,8 @@ export default {
     display: flex; 
     flex-flow: column; 
     cursor: pointer;
+    mix-blend-mode: luminosity;
+
     
 }
 
@@ -137,6 +139,7 @@ export default {
     border-radius: 4px;
     z-index: 30;
     outline: none;
+    mix-blend-mode: luminosity;
 }
 
 .hamburger span::before {
