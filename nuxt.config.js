@@ -77,6 +77,7 @@ module.exports = {
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
     'cookie-universal-nuxt',
+    '@nuxt/http',
   ],
   /*
   ** Axios module configuration
