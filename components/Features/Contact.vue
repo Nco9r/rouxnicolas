@@ -77,7 +77,6 @@ export default {
             console.log({...this.form})
             this.$axios.post('https://nco9r.herokuapp.com/api/send', {...this.form})
             .then(res => (
-                
                 this.validate = true, 
                 this.form = ''
             ))
