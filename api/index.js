@@ -9,7 +9,7 @@ const app = express()
 app.use(express.json())
 
 const cors = require('cors');
-app.use(cors({origin : 'https://rouxnicolas.fr'}));
+app.use(cors());
 
 app.post('/subscribe', async(req, res) => {
   const {email: email_address} = req.body
