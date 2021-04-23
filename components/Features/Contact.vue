@@ -41,7 +41,7 @@
               <input type="checkbox" checked required>
               <p>Je consens à ce que les données que j'ai soumises soient collectées et stockées en vue d'être utilisées pour traiter ma demande de contact.</p>
           </div>
-          <button :class="{validateForm : validate }">
+          <button :class="{validateForm : validate, onloadForm : onload}" >
               <p v-if="!validate">Soumettre votre demande</p><p v-if="validate">C'est noté !</p>
           </button> 
       </form>
@@ -69,14 +69,17 @@ export default {
             },
             validate: false,
             error: false,
+            onload : false, 
         }
     },
     methods: {
         submit(e) {
             e.preventDefault();
             console.log({...this.form})
+            this.onload = true; 
             this.$axios.post('https://nco9r.herokuapp.com/api/send', {...this.form})
             .then(res => (
+                this.onload = false,
                 this.validate = true, 
                 this.form = ''
             ))
@@ -247,6 +250,11 @@ button {
 
 .validate path{
     fill: var(--sombre);
+}
+
+.onloadForm {
+    opacity: .3;
+    cursor: none;
 }
 
 .validateForm {
