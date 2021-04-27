@@ -11,13 +11,6 @@
       <div class="footer_bottom">
           <div class="items_footer">
               <div class="title_footer">
-                  <h4>Adresse</h4>
-                  <p>1 rue des tiocs <br>
-                  33130, Bègles.</p>
-              </div>
-          </div>
-          <div class="items_footer">
-              <div class="title_footer">
                   <h4>Contact</h4>
                   <p>06 83 97 65 90 <br>
                   hello@rouxnicolas.fr</p>
@@ -25,12 +18,12 @@
           </div>
           <div class="items_footer">
               <div class="title_footer">
-                  <h4>Copyright</h4>
-                  <nuxt-link to='/mentions-legales'><p>Mentions légales </p></nuxt-link>
-                    <p>©Nicolas ROUX {{new Date().getFullYear()}}</p>
+                  <h4>Partenaires</h4>
+                  <img src="@/assets/img/png/B3E.PNG" alt="">
+                <img src="@/assets/img/png/n-a.png" alt="">
               </div>
           </div>
-          <div class="items_footer">
+           <div class="items_footer">
               <div class="title_footer" >
                   <h4>Réseaux Sociaux</h4>
                   <div class="sociaux">
@@ -38,6 +31,13 @@
                     <img src="@/assets/img/svg/git.svg" alt="" >
                     <img src="@/assets/img/svg/linkedin.svg" alt="" >
                   </div>
+              </div>
+          </div>
+          <div class="items_footer">
+              <div class="title_footer">
+                  <h4>Copyright</h4>
+                  <nuxt-link to='/mentions-legales'><p>Mentions légales </p></nuxt-link>
+                    <p>©Nicolas ROUX {{new Date().getFullYear()}}</p>
               </div>
           </div>
       </div>
@@ -107,10 +107,11 @@ footer  {
 .footer_bottom {
     margin-top: 60px;
     display: flex; 
-    flex-flow: row wrap; 
+    flex-flow: column; 
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 0 10px; 
+    text-align: center;
 }
 
 .word_red {
@@ -119,7 +120,7 @@ footer  {
 
 .items_footer {
     margin-bottom: 30px;
-    width: 50%;
+    
 
 }
 
@@ -127,21 +128,29 @@ footer  {
 
 .title_footer h4 {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 16px;
     text-transform: uppercase;
 }
 
 .title_footer p{
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 200;
+}
+
+.title_footer img {
+    width: 110px;
 }
 
 .sociaux {
     border-radius: 10Px;
+    display: flex; 
+    justify-content: space-between;
 }
 
-.sociaux img {
+.title_footer .sociaux img {
     margin-right: 10px;
+    width: 20px;
+    text-align: center;
 }
 
 
@@ -164,6 +173,17 @@ footer  {
         margin-bottom: 100px;
     }
 
+
+.footer_bottom {
+    margin-top: 60px;
+    display: flex; 
+    flex-flow:row wrap; 
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 10px; 
+    text-align: center;
+}
+
     .infos {
         display: flex; 
         flex-flow: row wrap;
@@ -173,6 +193,10 @@ footer  {
 
     .items_footer {
         width: 25%;
+    }
+
+    .sociaux {
+        justify-content: center;
     }
 
 

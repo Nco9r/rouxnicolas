@@ -41,9 +41,15 @@
               <input type="checkbox" checked required>
               <p>Je consens à ce que les données que j'ai soumises soient collectées et stockées en vue d'être utilisées pour traiter ma demande de contact.</p>
           </div>
-          <button :class="{validateForm : validate, onloadForm : onload}" >
-              <p v-if="!validate">Soumettre votre demande</p><p v-if="validate">C'est noté !</p>
+          <button v-if="submitButton" :class="{validateForm : validate, onloadForm : onload}">
+              <p>Soumettre votre demande</p>
           </button> 
+           <button v-if="onload" :class="{validateForm : validate, onloadForm : onload}">
+              <p >Traitement en cours..</p>
+          </button>
+          <button v-if="validate"  :class="{validateForm : validate, onloadForm : onload}">
+              <p v-if="validate">C'est noté !</p>
+          </button>
       </form>
   </div>
 </template>
@@ -67,6 +73,7 @@ export default {
                 subject : '',
                 text : '',
             },
+            submitButton: true,
             validate: false,
             error: false,
             onload : false, 
@@ -77,9 +84,11 @@ export default {
             e.preventDefault();
             console.log({...this.form})
             this.onload = true; 
+            this.submitButton = false;
             this.$axios.post('https://nco9r.herokuapp.com/api/send', {...this.form})
             .then(res => (
                 this.onload = false,
+                this.submitButton = false,
                 this.validate = true, 
                 this.form = ''
             ))
@@ -290,6 +299,15 @@ button {
 
 .rouge {
     color: var(--rouge);
+}
+
+.chargement p {
+    font-family: 'Source-sans-pro', sans-serif; 
+    font-weight: 400;
+    line-height: 28Px;
+    font-size: 12px; 
+    font-style: italic;
+    color: var(--sombre);
 }
 
 @media screen and (min-width: 1024px) {
