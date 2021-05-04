@@ -60,7 +60,6 @@ module.exports = {
   */
  plugins: [
   {
-    src: "~/plugins/locomotiveScroll.js",
     mode: "client"
   }
 ],

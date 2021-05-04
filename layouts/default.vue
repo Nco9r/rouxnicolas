@@ -16,10 +16,6 @@ import TheHeader from '../components/Default/TheHeader'
 import TheFooter from '../components/Default/TheFooter'
 import Neige from '../components/Default/Neige'
 import Cookies from '../components/Default/Cookies'
-import { TweenMax, Back } from 'gsap'
-
-
-
 
 export default {
   components: {

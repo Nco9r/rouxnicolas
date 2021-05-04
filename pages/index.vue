@@ -15,11 +15,6 @@ import Expertise from '../components/Features/Expertise';
 import Reference from '../components/Features/Reference';
 
 
-import { gsap } from 'gsap'
-import  { ScrollTrigger }  from "gsap/dist/ScrollTrigger"
-gsap.registerPlugin(ScrollTrigger)
-
-
 export default {
   components: {
     Hero,
