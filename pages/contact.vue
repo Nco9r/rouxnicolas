@@ -18,7 +18,8 @@ export default {
 <style>
 
 .contact {
-    padding: 50px 0;
+    padding: 0px 0;
+    background-color: var(--black);
 }
 
 </style>

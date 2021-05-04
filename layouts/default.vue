@@ -16,6 +16,7 @@ import TheHeader from '../components/Default/TheHeader'
 import TheFooter from '../components/Default/TheFooter'
 import Neige from '../components/Default/Neige'
 import Cookies from '../components/Default/Cookies'
+import { TweenMax, Back } from 'gsap'
 
 
 
@@ -35,6 +36,33 @@ export default {
   mounted(){
     
   },
+  transition: {
+    mode: 'out-in',
+    css: false,
+    beforeEnter (el) {
+      TweenMax.set(el, {
+        transformPerspective: 600,
+        perspective: 300,
+        transformStyle: 'preserve-3d'
+      })
+    },
+    enter (el, done) {
+      TweenMax.to(el, 1, {
+        rotationY: 360,
+        transformOrigin: '50% 50%',
+        ease: Back.easeOut
+      })
+      done()
+    },
+    leave (el, done) {
+      TweenMax.to(el, 1, {
+        rotationY: 0,
+        transformOrigin: '50% 50%',
+        ease: Back.easeIn
+      })
+      done()
+    }
+  },
 
   methods: {
   }
@@ -44,7 +72,7 @@ export default {
 
 <style>
 html {
-  font-family: 'Assistant', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  font-family: 'Avenir', -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   -ms-text-size-adjust: 100%;
@@ -53,12 +81,11 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   font-weight: 400;
-  background-color: var(--gray);
+  background-color: var(--black);
   color: var(--sombre);
 }
 
 body {
-  border: 5px solid white;
 }
 
  
@@ -85,6 +112,12 @@ body {
   font-family: 'Vesterbo';
   font-display: swap;
   src: url('~assets/fonts/Vesterbro-Poster.otf') format('truetype');
+}
+
+@media screen and (min-width: 769px) {
+    body {
+      display: none;
+    }
 }
 
 </style>

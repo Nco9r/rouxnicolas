@@ -1,8 +1,6 @@
 <template>
   <div class="hero">
-      <div class="hero_img">
-          <img src="@/assets/img/svg/hero.svg" alt="">
-      </div>
+      <div class="hero_fixed"></div>
       <div class="scroll">
           <svg xmlns="http://www.w3.org/2000/svg" width="15.693" height="15.712" viewBox="0 0 15.693 15.712">
   <path id="arrow-left_1_" data-name="arrow-left (1)" d="M20.389,12.543H10.46l4.317-4.3a1.314,1.314,0,1,0-1.858-1.858L6.378,12.922a1.352,1.352,0,0,0,0,1.858l6.541,6.541a1.314,1.314,0,1,0,1.858-1.858l-4.317-4.3h9.93a1.308,1.308,0,1,0,0-2.617Z" transform="translate(-6.005 -5.996)" fill="#f04e5a"/>
@@ -54,7 +52,14 @@ export default {
     align-items: center;
     padding: 10px 0;
     margin: 0 auto;
+    background-image: url('~assets/img/png/code_.jpeg');
+    background-size: cover;
+    background-position: -200px 0;
+    height: 500px;
+    opacity: .2;
 }
+
+.hero_fixed
 
 .scroll {
     position: absolute;

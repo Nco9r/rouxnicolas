@@ -96,8 +96,9 @@ export default {
 }
 
 .mobile {
-    padding: 15px 12px; 
+    /* padding: 15px 12px;  */
     display: flex;  
+    margin: 0;
 }
 
 .top_bar {
@@ -113,9 +114,19 @@ export default {
     transition: all .7s;
 }
 
+.logo_header {
+    mix-blend-mode: difference;
+    z-index: 1000;
+
+    }
+
 .logo_header img {
     width: 30px;
     z-index: 1000;
+    mix-blend-mode: difference;
+    z-index: 1000;
+
+
 }
 
 .red {
@@ -126,7 +137,11 @@ export default {
     display: flex; 
     flex-flow: column; 
     cursor: pointer;
-    mix-blend-mode: luminosity;
+    justify-content: center; 
+    align-items: center;
+    mix-blend-mode: difference;
+    width: 50px;
+    height: 50px;
 
     
 }
@@ -134,7 +149,8 @@ export default {
 .hamburger span {
     height: 3Px;
     border: none; 
-    background-color: var(--sombre); 
+    background-color: var(--white); 
+    mix-blend-mode: difference;
     width: 28px;
     border-radius: 4px;
     z-index: 30;
@@ -146,7 +162,7 @@ export default {
     content: '';
     height: 3Px;
     border: none; 
-    background-color: var(--sombre); 
+    background-color: var(--white); 
     width: 28px;
     position: absolute;
     border-radius: 4px;
@@ -157,7 +173,7 @@ export default {
     content: '';
     height: 3Px;
     border: none; 
-    background-color: var(--sombre); 
+    background-color: var(--white); 
     width: 28px;
     position: absolute;
     border-radius: 4px;
@@ -177,9 +193,9 @@ export default {
 }
 
 .menu {
-    background-color: var(--gray);
+    background-color: var(--black);
     height: 100%;
-    width: 90%;
+    width: 95%;
     position: fixed; 
     top: 0; 
     right: 0;
@@ -192,6 +208,7 @@ export default {
 
 .langues p {
     font-weight: 800;
+    color: var(--white);
 }
 
 .close {
@@ -230,7 +247,7 @@ export default {
 }
 
 .items_menu a {
-    color: var(--sombre);
+    color: var(--white);
     text-decoration: none; 
     cursor: pointer; 
     font-weight: 700;
@@ -312,8 +329,9 @@ hr {
 
 .contact {
     position: absolute; 
-    bottom: 5px;
+    bottom: 50px;
     left: 30px;
+    color: var(--white);
     font-size: 12px;
     animation: Emerge .5s;
     animation-delay: .4s;
@@ -376,7 +394,7 @@ strong {
     }
 
     .top_bar {
-        padding: 30px 100px;
+        padding: 30px 0px;
     }
    
     .items_menu {
@@ -391,7 +409,15 @@ strong {
         font-size: 46px;
         transition: all .5s;
         font-style: italic;
+    }
 
+    .logo_header {
+        mix-blend-mode: difference
+    }
+
+    .logo_header img {
+        width: 40px;
+        z-index: 1000;
     }
 
     
@@ -483,6 +509,10 @@ strong {
         cursor: pointer;
         right: 250px;
         top: 40px;
+    }
+
+    .logo_header {
+        mix-blend-mode: difference
     }
 }
 

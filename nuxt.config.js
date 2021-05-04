@@ -49,8 +49,7 @@ module.exports = {
   /*
   ** Global CSS
   */
-  css: [
-  ],
+  css: ['~/assets/css/main.css'],
 
   serverMiddleware: [
     { path: '/api/index', handler: '~/api/index' },

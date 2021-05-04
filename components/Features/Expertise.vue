@@ -1,7 +1,8 @@
 <template>
   <div class="stack" >
       <div class="bloc_right">
-      <p class="post_content" data-scroll data-scroll-speed="3">DOMAINES | COMPÉTENCES</p>
+      <p class="post_content" data-scroll data-scroll-speed="3">02 DOMAINES | COMPÉTENCES</p>
+      <hr>
       <h2 class="title_e"><span data-scroll="" data-scroll-delay="0.13" data-scroll-speed="6" class="is-inview"></span>Mes domaines d'expertise<span class="rouge">.</span></h2>
       <p class="after_title">Pour réaliser votre outil digital, quelque soit votre secteur d'activité, je vous propose différentes compétences qui s'articulent autour de trois axes : le conseil, le développement et l'accompagnement.
       </p>
@@ -74,13 +75,26 @@ export default {
 
 <style scoped>
 
+.stack {
+    background-color: var(--black);
+}
+hr {
+    border: none; 
+    width: 100%;
+    height: 1px;
+    background-color: var(--rouge);
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
 .rouge {
     color: var(--rouge);
 }
 
 .stack {
     transition: all .9s;
-    padding: 10px 0 50px 0; 
+    padding: 10px 0 20px 0; 
 }
 .background {
     background-color: var(--rouge);
@@ -103,7 +117,7 @@ background-color: var(--background_gray);
     font-family: 'Vesterbo', serif;
     font-weight: 800;
     line-height: 36px;
-    color: var(--sombre);
+    color: var(--white);
     font-size: 34px;
     margin-top: 15px;
     margin-bottom: 30px;
@@ -115,25 +129,23 @@ background-color: var(--background_gray);
     font-family: 'Assistant', sans-serif; 
     font-weight: 400;
     line-height: 26Px;
-    color: var(--sombre);
+    color: var(--white);
     margin-bottom: 30px;
     width: 100%;
     transform: translate(10deg, 10px);
 }
 
 .bloc_left_ {
-        background-color: rgb(255, 255, 255);
-        padding: 20px;
-        border-radius: 6px;
-        box-shadow: 0px 0px 20px rgb(236, 236, 236);
+    background-color: rgba(255, 255, 255, 0.034);
+    padding: 20px;
     }
 
 .cta {
    -webkit-appearance: none; 
    padding: 10px;
-    background-color: var(--rouge); 
+    background-color: transparent; 
     border: none; 
-    color: var(--white);
+    color: var(--rouge);
     font-weight: bold; 
     outline: none;
     margin-bottom: 50px;
@@ -173,7 +185,7 @@ background-color: var(--background_gray);
 
 .title_expertise {
     margin-top: 5px;
-    color: var(--sombre);
+    color: var(--white);
     font-family: 'Assistant', serif;
     font-weight: 800;
     font-size: 18px;
@@ -184,7 +196,7 @@ background-color: var(--background_gray);
     font-family: 'Assistant', sans-serif; 
     font-weight: 300;
     line-height: 20Px;
-    color: var(--sombre);
+    color: var(--white);
     margin-bottom: 30px;
     opacity: 0.7;
 }

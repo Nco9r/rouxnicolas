@@ -130,7 +130,7 @@ br {
 
 .block_content h3{
     font-size: 24px;
-    color: var(--sombre);
+    color: var(--white);
     font-weight: 700;
     font-family: 'Vesterbo';
     margin-bottom: 10px;
@@ -147,7 +147,7 @@ br {
 
 .block_content p{
     font-size: 16px;
-    color: var(--sombre);
+    color: var(--white);
     line-height: 26px;
     margin-bottom: 10px;
     font-weight: 300;

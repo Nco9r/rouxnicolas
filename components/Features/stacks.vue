@@ -1,22 +1,48 @@
 <template>
   <div class="stacks">
+      <div class="logo_grid">
       <div class="stacks_logo">
           <img src="@/assets/img/svg/html.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/css.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/js.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/vuejs.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/nuxt.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/node.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/strapi.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/git.svg" alt="">
+      </div>
+    
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/net.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/ai.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/xd.svg" alt="">
+      </div>
+      <div class="stacks_logo">
           <img src="@/assets/img/svg/ps.svg" alt="">
-          
+      </div>
       </div>
      <div class="stacks_content">
-         <span class="post_content">STACK | TECHNOLOGIES</span>
+         
+         <span class="post_content">01 STACK | TECHNOLOGIES</span>
+         <hr>
       <h1 class="lerp is-inview" data-scroll><span class="lerp is-inview" data-scroll data-scroll-delay="0.13" data-scroll-repeat data-scroll-speed="6">D</span><span class="lerp" data-scroll data-scroll-delay="0.12" data-scroll-speed="6">é</span>veloppeur web à Bordeaux<span class="rouge">.</span></h1>
       <p class="after_title">Développeur web freelance à Bordeaux, je développe vos projets web et mobile en proposant une approche unique et sur-mesure.</p><p class="after_title"> Aujourd'hui la performance est devenue primordiale. Un temps de chargement dépassant les 3 secondes aura pour effet de faire fuir vos clients.
       </p>
@@ -52,6 +78,16 @@ export default {
 
 <style scoped>
 
+hr {
+    border: none; 
+    width: 100%;
+    height: 1px;
+    background-color: var(--rouge);
+    margin-bottom: 10px;
+    margin-top: 10px;
+
+}
+
 .rouge {
     color: var(--rouge);
 }
@@ -79,7 +115,7 @@ export default {
     font-weight: 800;
     /* font-style: italic; */
     line-height: 36px;
-    color: var(--sombre);
+    color: var(--white);
     font-size: 34px;
     margin-top: 15px;
     margin-bottom: 30px;
@@ -90,23 +126,23 @@ export default {
     font-family: 'Assistant', sans-serif; 
     font-weight: 400;
     line-height: 26Px;
-    color: var(--sombre);
+    color: var(--white);
     margin-bottom: 30px;
     width: 100%;
 }
 
 .cta {
    -webkit-appearance: none; 
-   padding: 10px;
-    background-color: var(--rouge); 
+   padding: 14px;
+    background-color: transparent; 
     border: none; 
-    color: var(--white);
+    color: var(--rouge);
     font-weight: bold; 
     outline: none;
     margin-bottom: 50px;
     margin: 0px 0 40px 0;
     transition: all .5s;
-    border-radius: 6px;
+    border-radius: 3px;
     cursor: pointer;
     width: 100%;
     font-size: 16px;
@@ -132,20 +168,38 @@ export default {
     opacity: .8;
 }
 
-.stacks_logo {
-  text-align: center;
+.logo_grid {
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
 }
 
+.stacks_logo {
+    height: 90px;
+    width: 90px; 
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.034);
+    border-radius: 50%;
+    margin-bottom: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  
+}
 .stacks_logo img {
-    height: 60px;
-    width: 60px; 
-    padding: 10px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: var(--boxShadow);
-    margin-right: 15px;
-    margin-left: 5px;
-    margin-top: 30px;
+    height: 40px;
+    filter: grayscale(1);
+    width: 40px; 
+    transition: all .5s;
+
+}
+
+.stacks_logo img:hover {
+    height: 50px;
+    filter: grayscale(0);
+    width: 50px; 
 }
 
 @media screen and (min-width: 768px) {

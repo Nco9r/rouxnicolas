@@ -2,7 +2,6 @@
 <div>
     <transition name="loading" appear>
   <div class="overlay" v-if="loading" :value="overlay">
-      
         <div class="span_container">
             <div class="logo">
                 <img src="@/assets/img/svg/logo_black.svg" alt="">
@@ -22,7 +21,7 @@ export default {
   }),
   methods: {
     start() {
-      this.loading = true
+      this.loading = false
       this.overlay = true
     },
     finish() {
@@ -116,6 +115,9 @@ export default {
 
 
 
+.loading-enter{
+    animation: loadingOpen 1s; 
+}
 
 
 .loading-leave-active {

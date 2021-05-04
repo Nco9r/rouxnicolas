@@ -1,4 +1,6 @@
 <template>
+<div class="block_devis">
+    <div class="devis_img"></div>
   <div class="devis">
       <div class="left">
           <h2>Une idée, un projet ? <span class="rouge">Prenons</span> contact</h2>
@@ -25,7 +27,8 @@
           <label for="">
               <p>Prestation <span class="liste">choisir dans la liste déroulante</span></p>
               <select name="" id="" v-model="form.prestation" required>
-                  <option value="Landing page" selected="selected" >Landing page</option>
+                  <option value="Landing page" disabled selected>Choisir dans la liste</option>
+                  <option value="Landing page" >Landing page</option>
                   <option value="Site vitrine">Site vitrine</option>
                   <option value="Site E-commerce">Site E-commerce</option>
                   <option value="Modules">Modules</option>
@@ -52,6 +55,7 @@
           </button>
       </form>
   </div>
+</div>
 </template>
 
 <script>
@@ -85,7 +89,7 @@ export default {
             console.log({...this.form})
             this.onload = true; 
             this.submitButton = false;
-            this.$axios.post('https://nco9r.herokuapp.com/api/send', {...this.form})
+            this.$axios.post('api/send', {...this.form})
             .then(res => (
                 this.onload = false,
                 this.submitButton = false,
@@ -113,8 +117,24 @@ export default {
 
 <style scoped>
 
+.block_devis {
+    display: flex; 
+    flex-flow: column;
+    padding: 0px 0px;
+}
+
+.devis_img {
+    background-image: url('~assets/img/png/works.jpg');
+    background-position: cover;
+    width: 100%;
+    height: 120vw;
+    background-position: -250px 0;
+    opacity: .2;
+}
+    
+
 .devis  {
-    padding: 0 20px;
+    padding: 30px 20px;
     background-color: var(--background_gray);
     margin-top: -1px;
     color: var(--sombre);
@@ -124,9 +144,9 @@ export default {
     font-family: 'Vesterbo', serif;
     font-weight: 900;
     /* font-style: italic; */
-    line-height: 36px;
-    /* color: var(--white); */
-    font-size: 28px;
+    line-height: 42px;
+    color: var(--white);
+    font-size: 32px;
     margin-bottom: 20px;
 }
 
@@ -134,7 +154,7 @@ export default {
     font-family: 'Assistant', sans-serif; 
     font-weight: 400;
     line-height: 28Px;
-    color: var(--sombre);
+    color: var(--white);
 }
 
 .sociaux {
@@ -166,7 +186,7 @@ label p {
     font-weight: 900;
     /* font-style: italic; */
     line-height: 20px;
-    color: var(--sombre);
+    color: var(--white);
     font-size: 14px;
     margin-bottom: 10px;
   
@@ -175,28 +195,26 @@ label p {
 label input {
     margin-bottom: 20px;
     border: none; 
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.034);
     outline: none;
     width: 100%;
-    border-radius: 3px;
-    padding: 10px;
+    padding: 14px;
     font-family: 'Lato', sans-serif;
-    color: var(--sombre);
+    color: var(--white);
     font-size: 16px;
 
 }
 
 label select {
     -webkit-appearance: none; 
-    padding: 10px;
-    background-color: white; 
+    padding: 14px;
+    background-color: var(--rouge); 
     border: 1px solid var(--sombre); 
     color: var(--sombre);
     font-weight: bold; 
     outline: none;
     text-align: center; 
     margin-bottom: 30px;
-    border-radius: 3px;
     font-size: 16px;
 }
 
@@ -215,7 +233,7 @@ label select {
 label textarea {
     margin-bottom: 20px;
     border: none; 
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.034);
     outline: none;
     width: 100%;
     padding: 10px;
@@ -228,7 +246,7 @@ label textarea {
 
 button {
     -webkit-appearance: none; 
-    padding: 10px;
+    padding: 14px;
     background-color: var(--rouge); 
     border: none; 
     display: flex; 
@@ -241,9 +259,38 @@ button {
     margin-bottom: 30px;
     margin: 30px auto;
     transition: all .5s;
-    border-radius: 3px;
     width: 100%;
     font-size: 16px;
+}
+
+input[type="checkbox" i] {
+    background-color: var(--white)!important;
+    width: 30px; 
+    height: 30px;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    outline: none; 
+    transition: all .3s; 
+
+}
+
+input[type="checkbox" i]:checked {
+    background-color: var(--rouge)!important;
+    width: 30px; 
+    height: 30px;
+    -webkit-appearance: none;
+    display: flex; 
+    transition: all .3s; 
+
+}
+
+input[type="checkbox" i]:checked::after {
+    content: 'x';
+    font-size: 16px;
+    color: white; 
+    font-weight: bold;
+    display: flex; 
+    margin: auto;
 }
 
 .validate {
@@ -291,7 +338,7 @@ button {
     font-family: 'Source-sans-pro', sans-serif; 
     font-weight: 300;
     line-height: 16Px;
-    color: var(--sombre);
+    color: var(--white);
     margin-left: 10px;
     font-style: italic;
     margin-top: -1px;
@@ -311,14 +358,39 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
-    .devis {
-        padding: 20px 350px 200px 350px;
+
+    .block_devis {
+        display: flex; 
+        flex-flow: row wrap;
     }
+    .devis {
+        padding: 20px 40px 20px 40px;
+        width: 50%;
+    }
+
+    .devis_img {
+        width: 50%;
+        background-image: url('~assets/img/png/works.jpg');
+        background-position: cover;
+        background-size: 340%;
+        background-repeat: no-repeat;
+        opacity: .2;
+    }
+    .block_devis img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        background-color: var(--black);
+    }
+
+
 
     .left h2 {
         font-size: 50px; 
         line-height: 55px;
     }
+
+
 
     button {
     -webkit-appearance: none; 
@@ -328,7 +400,7 @@ button {
     display: flex; 
     align-items: center; 
     justify-content: center;
-    color: var(--white);
+    color: var(--black);
     font-weight: bold; 
     outline: none;
     text-align: center; 
@@ -345,9 +417,7 @@ button {
 }
 
 @media screen and (min-width: 1440px) {
-    .devis {
-        padding: 20px 350px 200px 350px;
-    }
+    
 }
 
 

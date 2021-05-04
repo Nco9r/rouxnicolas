@@ -1,7 +1,7 @@
 <template>
   <footer>
       <div class="left">
-          <h2>Let's <span class="word_red">work</span> together</h2>
+          <h2><span>Let's</span> <br><span class="word_red">work</span> <br> <span class="right">together</span></h2>
       </div>
       <div class="logo">
           <span class="span_logo"></span>
@@ -15,30 +15,23 @@
                   <p>06 83 97 65 90 <br>
                   hello@rouxnicolas.fr</p>
               </div>
+              <hr>
           </div>
-          <div class="items_footer">
+          <!-- <div class="items_footer">
               <div class="title_footer">
                   <h4>Partenaires</h4>
                   <img src="@/assets/img/png/B3E.PNG" alt="">
                 <img src="@/assets/img/png/n-a.png" alt="">
               </div>
           </div>
-           <div class="items_footer">
-              <div class="title_footer" >
-                  <h4>Réseaux Sociaux</h4>
-                  <div class="sociaux">
-                    <img src="@/assets/img/svg/insta.svg" alt="" >
-                    <img src="@/assets/img/svg/git.svg" alt="" >
-                    <img src="@/assets/img/svg/linkedin.svg" alt="" >
-                  </div>
-              </div>
-          </div>
+           -->
           <div class="items_footer">
               <div class="title_footer">
                   <h4>Copyright</h4>
                   <nuxt-link to='/mentions-legales'><p>Mentions légales </p></nuxt-link>
                     <p>©Nicolas ROUX {{new Date().getFullYear()}}</p>
               </div>
+              <hr>
           </div>
       </div>
   </footer>
@@ -58,7 +51,7 @@ a {
 }
 
 footer  {
-    padding: 105px 15px 20px 15px;
+    padding: 0px 15px 20px 15px;
     background-color: var(--background_gray);
     margin-top: -1px;
     color: var(--sombre);
@@ -68,18 +61,22 @@ footer  {
     font-family: 'Vesterbo', serif;
     font-weight: 900;
     /* font-style: italic; */
-    line-height:36px;
-    /* color: var(--white); */
+    line-height:50px;
+    color: var(--white);
     font-size: 32px;
     margin-bottom: 50px;
-    text-align: center;
+}
+
+.right{
+    float: right;
+    margin-top: -15px!important;
 }
 
 .left p {
     font-family: 'Source-sans-pro', sans-serif; 
     font-weight: 400;
     line-height: 24Px;
-    color: var(--sombre);
+    color: var(--white);
 }
 
 .sociaux {
@@ -101,40 +98,53 @@ footer  {
 .span_logo {
     width: 100px;
     height: 1px;
-    background-color: var(--sombre);
+    background-color: var(--white);
 }
 
 .footer_bottom {
-    margin-top: 60px;
+    margin-top: 20px;
     display: flex; 
     flex-flow: column; 
-    justify-content: center;
-    align-items: center;
-    padding: 0 10px; 
-    text-align: center;
+    justify-content: flex-start;
+    align-items:flex-start;
+    text-align: left;
 }
 
 .word_red {
     color: var(--rouge);
+    font-size: 125px;
 }
 
 .items_footer {
-    margin-bottom: 30px;
-    
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+hr {
+    border: none; 
+    width: 100%;
+    height: 1px;
+    background-color: var(--white);
+    margin-bottom: 10px;
+    margin-top: 10px;
 
 }
 
 
 
 .title_footer h4 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     font-size: 16px;
-    text-transform: uppercase;
+    color: var(--white);
+    font-weight: bold;
+    font-family: 'Assistant', sans-serif; 
 }
 
 .title_footer p{
-    font-size: 16px;
+    font-size: 14px;
+    font-family: 'Assistant', sans-serif; 
     font-weight: 200;
+    color: var(--white);
 }
 
 .title_footer img {
