@@ -24,7 +24,7 @@ export default {
   },
   data (){
     return {
-      lmS: null
+      
     }
   },
   mounted(){

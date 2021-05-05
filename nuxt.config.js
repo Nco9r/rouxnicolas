@@ -2,8 +2,7 @@
 require('dotenv').config()
 module.exports = {
   mode: 'universal',
-  target: 'server',
-  buildDir: 'nuxt-dist',
+  target: 'static',
   /*
   ** Headers of the page
   */
@@ -53,15 +52,12 @@ module.exports = {
 
   serverMiddleware: [
     { path: '/api/index', handler: '~/api/index' },
-    { path: '/api/newsletter', handler: '~/api/newsletter' },
+
   ],
   /*
   ** Plugins to load before mounting the App
   */
  plugins: [
-  {
-    mode: "client"
-  }
 ],
   /*
   ** Nuxt.js dev-modules
@@ -89,6 +85,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    babel:{
+      plugins: [
+        ['@babel/plugin-proposal-private-methods', { loose: true }]
+      ]
+    },
     /*
     ** You can extend webpack config here
     */

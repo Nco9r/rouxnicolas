@@ -66,10 +66,7 @@ export default {
     }
   },
   mounted(){
-    this.lmS = new this.locomotiveScroll({
-      el: document.querySelector(".lerp"),
-      smooth: 0,
-    });
+  
   },
 }
 
