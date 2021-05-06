@@ -32,7 +32,7 @@ export default {
   mounted(){
     
   },
-
+  
 
   methods: {
   }
@@ -53,6 +53,11 @@ html {
   font-weight: 400;
   background-color: var(--black);
   color: var(--sombre);
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden; 
 }
  
 
@@ -70,7 +75,14 @@ html {
   --gray: #f8f8f8;
   --white: white; 
   --black: #202020;
-  --boxShadow: 0px 10px 60px rgb(236, 236, 236);
+  --yellowt: #f3f736;
+  --greent: #8dcc45;
+  --bleut: #5278ca;
+  --rouget: #e44d54;
+  --grayt: #ffffff1e;
+  --violett: #9f36be;
+  --turquoiset: #04b9da;
+  --oranget: #e06513;
 ;
 }
 
@@ -81,9 +93,7 @@ html {
 }
 
 @media screen and (min-width: 769px) {
-    body {
-      display: none;
-    }
+   
 }
 
 </style>

@@ -33,10 +33,6 @@ export default {
         setTimeout(() => this.$nuxt.$loading.finish(), 1000)
         })
   },
-  methods: {
-  }
-
-
 }
 </script>
 
@@ -105,7 +101,7 @@ export default {
 
 @media screen and (min-width: 1024px) {
     .container {
-      padding: 0 100px; 
+      padding: 0 0px; 
     }
 
     .cta_index {
@@ -117,7 +113,7 @@ export default {
 
 @media screen and (min-width: 1440px) {
    .container {
-      padding: 0 250px; 
+      padding: 0 70px; 
     }
 }
 

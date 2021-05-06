@@ -266,19 +266,11 @@ hr {
 
 @media screen and (min-width: 1024px) {
     .title_reference h2 {
-        font-size: 50px;
-        text-align: center;
+        font-size: 120px;
         margin-bottom: 50px;
+        line-height: 105px;
         margin-top: 20px;
 
-    }
-
-    .title_reference p {
-        text-align: center; 
-    }
-
-    .reference {
-        margin-bottom: 150px;
     }
 
     .reference_img {
@@ -288,55 +280,17 @@ hr {
         justify-content: space-between;
     }
 
-    .items {
-        width: 32%;
-        display: flex;
-        padding: 10px;
-        transition: all .5s;
+ 
 
+    .items_cards {
+        display: flex; 
+        flex-flow: wrap;
+        justify-content: center;
     }
 
-    .items:hover {
-        transform: translateY(-20px);
-    }
-
-    .ali:hover {
-        opacity: .7;
-        transition: all .3s;
-    }
-
-     .mansa:hover {
-        opacity: .7;
-        transition: all .3s;
-    }
-
-     .cdh:hover {
-        opacity: .7;
-        transition: all .3s;
-    }
-
-     .mb:hover {
-        opacity: .7;
-        transition: all .3s;
-    }
-
-     .covid:hover {
-        opacity: .7;
-        transition: all .3s;
-    }
-
-    .ap:hover {
-         filter: grayscale(1)
-    }
-
-
-    .content {
-        position: relative;
-        width: 32%;
-    }
-
-    .box {
-        height: 350px;
+    .cards {
+        width: 25%;
+        margin-right: 50px;
     }
 
 }

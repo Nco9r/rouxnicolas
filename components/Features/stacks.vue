@@ -43,7 +43,7 @@
          
          <span class="post_content">01 STACK | TECHNOLOGIES</span>
          <hr>
-      <h1 class="lerp is-inview" data-scroll><span class="lerp is-inview" data-scroll data-scroll-delay="0.13" data-scroll-repeat data-scroll-speed="6">D</span><span class="lerp" data-scroll data-scroll-delay="0.12" data-scroll-speed="6">é</span>veloppeur web à Bordeaux<span class="rouge">.</span></h1>
+      <h1>Développeur <span class="rouge">web</span> à Bordeaux<span class="rouge">.</span></h1>
       <p class="after_title">Développeur web freelance à Bordeaux, je développe vos projets web et mobile en proposant une approche unique et sur-mesure.</p><p class="after_title"> Aujourd'hui la performance est devenue primordiale. Un temps de chargement dépassant les 3 secondes aura pour effet de faire fuir vos clients.
       </p>
       <p class="after_title">Il m'est donc nécessaire d'être en perpétuel renouvellement pour vous proposer les dernières technologies du web et apporter une expérience enrichissante à vos internautes.
@@ -86,7 +86,8 @@ hr {
 }
 
 .rouge {
-    color: var(--rouge);
+    color: var(--black);
+    -webkit-text-stroke: 1px var(--rouge);
 }
 
 .stacks {
@@ -96,7 +97,14 @@ hr {
         align-items: center; 
         margin-top: 30px;
         margin-bottom: 40px;
-    }
+}
+
+.text_stroke p{
+    -webkit-text-stroke: 1px var(--white);
+    font-size: 70px;
+    text-transform: uppercase;
+}
+
 
 .post_content {
     color: var(--rouge); 
@@ -206,33 +214,55 @@ hr {
 @media screen and (min-width: 1024px) {
     .stacks {
         display: flex; 
-        flex-flow: row; 
-        justify-content: space-between;
-        align-items: center; 
-        margin-top: 50px;
+        flex-flow: row-reverse; 
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: -300px;
         margin-bottom: 80px;
+        width: 100%;
+    }
+
+    .logo_grid {
+        width: 60%;
+        display: flex; 
+        flex-flow: row wrap;
+        margin-left: 50px;
+        margin-top: 450px;
     }
 
     .stacks_logo {
-        width: 50%;
+        height: 90px;
+        width: 90px; 
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.034);
+        border-radius: 50%;
+        margin-bottom: 20px;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+  
     }
-
     .stacks_logo img {
-        margin-right: 30px;
-        margin-bottom: 30px;
-        height: 70px;
-    width: 70px; 
-    padding: 10px;
+        height: 40px;
+        filter: grayscale(1);
+        width: 40px; 
+        transition: all .5s;
+
     }
 
     .stacks_content {
         width: 50%;
     }
 
+    hr {
+        width: 180px;
+    }
+
     .stacks_content h1 {
-        font-size: 50px;
-        line-height: 55px;
-        color: var(--sombre);
+        font-size: 120px;
+        line-height: 105px;
+        width: 80%;
+        color: var(--white);
 
     }
 
@@ -242,9 +272,10 @@ hr {
 
     .after_title {
         font-size: 16px;
-        line-height: 26px;
-        color: var(--sombre);
-        width: 100%;
+        line-height: 24px;
+        color: var(--white);
+        width: 70%;
+
     }
 
     .cta {
@@ -255,9 +286,7 @@ hr {
 }
 
 @media screen and (min-width: 1440px) {
-  .stacks {
-      margin-top: 150px;
-  }
+  
 }
 
 </style>

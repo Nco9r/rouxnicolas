@@ -3,7 +3,7 @@
       <div class="bloc_right">
       <p class="post_content" data-scroll data-scroll-speed="3">02 DOMAINES | COMPÉTENCES</p>
       <hr>
-      <h2 class="title_e"><span data-scroll="" data-scroll-delay="0.13" data-scroll-speed="6" class="is-inview"></span>Mes domaines d'expertise<span class="rouge">.</span></h2>
+      <h2 class="title_e"><span data-scroll="" data-scroll-delay="0.13" data-scroll-speed="6" class="is-inview"></span>Mes <span class="rouge">domaines</span> d'expertise<span class="rouge">.</span></h2>
       <p class="after_title">Pour réaliser votre outil digital, quelque soit votre secteur d'activité, je vous propose différentes compétences qui s'articulent autour de trois axes : le conseil, le développement et l'accompagnement.
       </p>
       <p class="after_title">J'interviens dans des domaines d'expertises ciblés : création de site internet, référencement naturel et UX Design.
@@ -211,7 +211,7 @@ background-color: var(--background_gray);
 @media screen and (min-width: 1024px) {
     .stack {
         display: flex; 
-        flex-flow: row; 
+        flex-flow: row-reverse; 
         padding: 50px 0 100Px 0;
         align-items: center; 
         justify-content: space-around;
@@ -219,9 +219,9 @@ background-color: var(--background_gray);
     }
 
     .stack .title_e {
-        font-size: 50px;
-        line-height: 55px;
-        color: var(--sombre);
+        font-size: 120px;
+        line-height: 105px;
+        color: var(--white);
 
     }
 
@@ -232,7 +232,7 @@ background-color: var(--background_gray);
     .after_title {
         font-size: 16px;
         line-height: 26px;
-        color: var(--sombre);
+        color: var(--white);
         width: 90%;
     }
 
@@ -244,18 +244,18 @@ background-color: var(--background_gray);
         display: flex; 
         flex-flow: row wrap; 
         justify-content: center; 
-        margin: 50px auto;
-        width: 50%;
+        margin: 0px auto;
+        width: 40%;
+        align-items: flex-end;
 
-        background-color: rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.144);
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0px 0px 40px rgb(236, 236, 236);
     }
 
     .expertise {
         width: 225px;
-         display: flex; 
+        display: flex; 
         flex-flow: column; 
         margin: auto;
     }
@@ -270,9 +270,7 @@ background-color: var(--background_gray);
         flex-flow: row wrap; 
     }
 
-    .cta {
-        width: 40%;
-    }
+    
 
 
 }

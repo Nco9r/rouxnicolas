@@ -22,6 +22,7 @@
               </div>
               <div class="items_menu" @click="open = !open" >
                   <nuxt-link to='/'>Accueil</nuxt-link>
+                  <nuxt-link to='/about'>À propos</nuxt-link>
                   <nuxt-link to='/references'>Références</nuxt-link>
                   <nuxt-link to='/contact'>Contact</nuxt-link>
               </div>
@@ -273,6 +274,11 @@ export default {
     
 }
 
+.items_menu a:nth-child(4) {
+    animation-delay: 500ms;
+    
+}
+
 
 
 @keyframes Emerge {
@@ -297,7 +303,7 @@ hr {
     width: 20px;
     height: 3px;
     border-radius: 4px;
-    background-color: var(--sombre);
+    background-color: var(--white);
     animation: Emerge .5s;
     animation-delay: 600ms;
     opacity: 0;
@@ -359,10 +365,12 @@ strong {
 
 @keyframes close {
     from{
-        opacity: 1;
+    transform: translateX(0%);
+
     }
     to {
-        opacity: 0;
+    transform: translateX(100%);
+
     }
 }
 
@@ -371,17 +379,19 @@ strong {
     animation: open .3s; 
 }
 
+.overlay-leave-active {
+    animation: close .5s; 
+}
+
 .open-enter-active {
     animation: open .7s; 
 }
 
 .open-leave-active {
-    animation: close .3s; 
+    animation: close .9s; 
 }
 
-.overlay-leave-active {
-    animation: close .5s; 
-}
+
 
 
 @media screen and (min-width: 1024px) {
@@ -404,7 +414,7 @@ strong {
     }
 
     .items_menu a {
-        color: var(--violet);
+        color: var(--white);
         margin-right: 70px;
         font-size: 46px;
         transition: all .5s;
@@ -503,7 +513,7 @@ strong {
 
 @media screen and (min-width: 1440px) {
      .top_bar {
-        padding: 30px 250px;
+        padding: 30px 70px;
      }
      .close {
         cursor: pointer;

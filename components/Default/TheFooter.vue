@@ -175,12 +175,22 @@ hr {
 @media screen and (min-width: 1024px) {
 
     footer {
-        padding: 50px 150px;
+        padding: 50px 50px;
     }
     .left h2 {
-        text-align: center;
         font-size: 60px;
         margin-bottom: 100px;
+        width: 580Px;
+        line-height: 80px;
+    }
+
+    .word_red {
+        font-size: 210px;
+        margin-top: 100px;
+    }
+
+    .right {
+        margin-top: 70px;
     }
 
 
@@ -188,10 +198,9 @@ hr {
     margin-top: 60px;
     display: flex; 
     flex-flow:row wrap; 
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-start;
     padding: 0 10px; 
-    text-align: center;
 }
 
     .infos {

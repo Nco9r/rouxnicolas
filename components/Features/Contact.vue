@@ -89,7 +89,7 @@ export default {
             console.log({...this.form})
             this.onload = true; 
             this.submitButton = false;
-            this.$axios.post('api/send', {...this.form})
+            this.$axios.post('https://test.rouxnicolas.fr/api/send', {...this.form})
             .then(res => (
                 this.onload = false,
                 this.submitButton = false,

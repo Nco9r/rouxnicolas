@@ -2,7 +2,7 @@
 require('dotenv').config()
 module.exports = {
   mode: 'universal',
-  target: 'static',
+  buildDir: 'nuxt-dist',
   /*
   ** Headers of the page
   */
@@ -38,7 +38,8 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel:'stylesheet', href:'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700;800&family=Playfair+Display:wght@900&display=swap'}
+      { rel:'stylesheet', href:'https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;700;800&family=Playfair+Display:wght@900&family=Roboto+Monodisplay=swap'},
+      
     ]
   },
   /*

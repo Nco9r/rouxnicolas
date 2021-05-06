@@ -52,11 +52,12 @@ export default {
     align-items: center;
     padding: 10px 0;
     margin: 0 auto;
-    background-image: url('~assets/img/png/code_.jpeg');
+    /* background-image: url('~assets/img/png/code_.jpeg'); */
     background-size: cover;
+    /* margin: 0 -20px; */
     background-position: -200px 0;
     height: 500px;
-    opacity: .2;
+    /* opacity: .2; */
 }
 
 .hero_fixed
@@ -159,17 +160,6 @@ export default {
     padding: 100px 0;
     }   
 
-     .date {
-        display: flex; 
-        flex-flow: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        position: absolute; 
-        bottom: 20px;
-        left: 100px; 
-        right: -900px;
-    }
-
     .hr {
         border: none; 
         height: 1px;
@@ -194,12 +184,6 @@ export default {
     margin-top: 30px;
     }
 
-    .hero_content h1 {
-    font-family: 'Vesterbo';
-    color: var(--sombre);
-    font-size: 62px;
-    }
-
     .hero_content img {
         width: 15%;
         margin-bottom: 30px;
@@ -216,16 +200,7 @@ export default {
 }
 
 @media screen and (min-width: 1440px) {
-    .date {
-        display: flex; 
-        flex-flow: row;
-        justify-content: space-between;
-        align-items: flex-end;
-        position: absolute; 
-        bottom: 220px;
-        left: 250px; 
-        right: -1070px;
-    }
+    
 }
 
 </style>
