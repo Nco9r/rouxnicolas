@@ -2,7 +2,7 @@
 require('dotenv').config()
 module.exports = {
   mode: 'universal',
-  buildDir: 'nuxt-dist',
+  target: "static",
   /*
   ** Headers of the page
   */
